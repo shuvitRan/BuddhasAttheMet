@@ -1,0 +1,477 @@
+html{
+  box-sizing: border-box;
+
+}
+body {
+  font: 10px Helvetica Neue,Helvetica,sans-serif;
+  margin: 0;
+  text-anchor: end;
+  background-color: rgb(255, 255, 255);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+
+}
+
+.titleBox{
+  display: grid;
+  height: 100%;
+  z-index: 10;
+
+}
+.TitleImg{
+   content:url(../Assets/Title.png);
+   max-width: 100%;
+   max-height: 100vh;
+   box-shadow: 5px 5px 18px #888888;
+   z-index: -1;
+
+}
+
+.FooterImg{
+
+   /* content:url(../Assets/FooterImg.png); */
+   max-width: 100%;
+   max-height: 100vh;
+box-shadow: 4px 4px 18px #b8b8b8;
+}
+
+
+
+.grid-container {
+  border: 4 solid black;
+  padding: 5%;
+  display: grid;
+  /* align-items: center; */
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-auto-columns: repeat(4, 1fr); */
+  /* grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); */
+  grid-template-rows: masonry;
+  grid-auto-rows: minmax(20px, auto);
+  grid-auto-flow: row dense;
+  /* justify-content: center;	 */
+  /* clear: both; */
+  z-index: 0;
+}
+
+.grid-container1{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+/* Create three equal columns that floats next to each other */
+.grid-item{
+ 
+  /* position: relative;
+  content: counter(masonry);
+  counter-increment: masonry; */
+  
+  /* text-align: center; */
+  display: block;
+  flex-direction: row;
+  justify-content: center;
+  border: 2px ;
+  align-self: stretch;
+  z-index: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.grid-item div p{
+text-align: center;
+}
+
+
+.grid-item :hover{
+  cursor: pointer;
+}
+/* Clear floats after the columns */
+/* .row:after {
+  display: grid;
+  grid-auto-columns: repeat(4,1fr);
+  grid-template-rows: 100px,100px;
+  clear: both;
+} */
+.GrapInfo{
+  display: flex;
+  width :20vw;
+  /* display: block; */
+  /* text-align: center; */
+  justify-content: space-around;
+  /* justify-content: space-between; */
+}
+
+
+.detailPages{
+  /* display: block; */
+  position: sticky;
+   position: -webkit-sticky;
+  top: 0;
+  bottom: 0px;
+  margin: 0;
+  background-color: rgba(255, 255, 255,1);
+  /* height: 50px; */
+  /* margin-top: 200px; */
+  /* margin-left: -100px */
+  width:  100%;
+  /* position: fixed; */
+  z-index: 10 !important;
+/* justify-content: center; */
+box-shadow: 5px 10px 18px #888888;
+}
+
+.hidden{
+/* display: fixed; */
+position: sticky;
+bottom: 0px;
+z-index: 10;
+}
+
+
+.menu{
+  display: flex;
+  padding-top: 10px;
+  margin-bottom:  2%;
+  /* margin:0 5%; */
+  /* width :20vw; */
+  /* display: block; */
+  /* text-align: center; */
+  justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgb(142, 142, 142);
+
+}
+
+.menu button{
+  color:black;
+  /* margin-left: 5%; */
+  /* margin: 30px 20px; */
+  width: 200px;
+  line-height: 30px;
+  background-color: rgba(255,255,255,1);
+  border: none;
+  outline:none;
+  /* border-radius: 20px; */
+transition: 1s;
+font-weight: bold;
+font-size: 18px;
+ /* border-bottom: 1px solid rgb(20, 20, 20); */
+
+
+
+}
+
+
+.menu button:hover{
+  color:rgb(253, 0, 0) !important;
+  /* border:  none; */
+  border-bottom: 3px solid rgba(255, 0, 0,0);
+  /* border-bottom: 3px solid rgb(20, 20, 20); */
+  /* background-color: rgba(0, 0, 0, 0.1)  !important; */
+ 
+  /* border-radius: 20px; */
+  cursor:pointer;
+
+
+}
+
+.onClass{
+  color:rgb(255, 255, 255);
+background-color: rgba(255,0,0,1);
+
+}
+
+.describeArea{
+display: flex;
+/* position:  */
+
+}
+
+
+#dataSource {
+  display:inline-block;
+
+  /* margin-left: 10%; */
+    padding-top:  35px;
+    /* text-align: left; */
+
+    margin-top: 0px;
+    width:130px;
+    /* margin-bottom: auto; */
+    /* margin-left: auto; */
+    float: right;
+    margin-left:auto;
+  margin-right:  5%;
+    font-family: "Didot LT STD";
+
+    font-size:12px;
+    /* left: 85%; */
+
+}
+#dataSource p{
+position: relative;
+  text-align: right;
+  display:inline-block;
+    margin-top: 0px;
+    /* float: center; */
+    /* margin-left: auto; */
+    /* margin-right: 10px; */
+}
+
+#metLogo{
+  display: inline-block;
+  background-color: none;
+  /* padding-top:  35px; */
+  position: relative;
+   content:url(../Assets/metlogo.png);
+   max-width: 50px;
+   /* max-height: 50px; */
+     /* margin-top: 30px; */
+      margin-left: auto;
+        margin-bottom: auto;
+        /* margin-right: 20px; */
+        /* left:90%; */
+          float: right;
+
+   /* max-height: 100vh; */
+/* box-shadow: 4px 4px 18px #b8b8b8; */
+}
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 850px) {
+  .grid-container  {
+    /* width: 50%; */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .GrapInfo{
+    /* display: flex; */
+    width :40vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .grid-container  {
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .GrapInfo{
+    /* display: flex; */
+    width :80vw;
+  }
+}
+
+
+#mainDes P{
+
+font-family: "Didot LT STD";
+
+font-size:14px;
+}
+
+
+#subtitle{
+color:rgb(133, 133, 133);
+font-size:12px;
+/* display: block; */
+  position: relative;
+  margin-left:  5%;
+}
+#mainDes{
+  position: relative;
+  margin-left:  5%;
+  margin-top:  20px;
+  padding-bottom:  4%;
+  display: inline-block;
+  background-color: white;
+  /* padding-top: -30px; */
+color:rgb(62, 62, 62);
+
+width: 50vw;
+}
+
+h1{
+  font-size: 40px;
+  text-align: center;
+
+}
+
+
+
+h2{
+  font-size: 20px;
+  text-align: left;
+  padding-left: 40px;;
+
+}
+
+
+p{
+
+
+}
+
+
+.line {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+.area {
+  fill: #e7e7e7;
+}
+
+#wrap{
+   width : 1380px;
+   margin :auto;
+
+
+}
+#timeline{
+  /* background-color: rgb(212, 212, 212); */
+  /* width : 100%; */
+  padding-top: 30px;
+  padding-bottom:  30px;
+  /* margin :auto; */
+/* display : absolute; */
+  height: 20px;
+  text-align: left;
+border-bottom: .5px solid grey;
+
+}
+
+#timeline p {
+/* position: absolute; */
+  font: 18px Helvetica;
+  font-style: italic;
+  /* top:20px; */
+  font-weight : bold ;
+  /* width: 345px; */
+  color: rgb(55, 52, 52);
+  display : inline;
+ /* margin-top: auto; */
+ /* margin-left: 160px; */
+
+
+}
+
+
+.vizGraph {
+  /* background-color: white; */
+  /* rgb(244, 242, 242) */
+ width : 1360px;
+ height: 350px;
+ display : inline-block;
+
+    /* align-items: center; */
+  /* float : right; */
+  /* position: absolute; */
+  /* right:50%;
+  left: 50%; */
+}
+
+.describe {
+  display : inline-block;
+    position: relative;
+    width : 100px;
+     height : 200px;
+    /*
+    right:10px; */
+    /* top: -100px; */
+    bottom: 40%;
+}
+
+.desP{
+/* width : 100px; */
+transform: rotate(90deg);
+ -webkit-transform: rotate(90deg);
+ -moz-transform: rotate(90deg);
+ -ms-transform: rotate(90deg);
+ -o-transform: rotate(90deg);;
+font-size: 40px;
+font-weight : bold ;
+/* display : inline; */
+}
+
+
+
+.myfooter{
+    /* margin-bottom: 0px; */
+    /* position:absolute; */
+    /* padding: 1rem; */
+    color: rgb(91, 91, 91);
+    /* margin-bottom: 1px;
+      margin-left: 4px;
+    margin-top: 5px; */
+    margin: 2%5%;
+    /* bottom: 10px; */
+    /* background-color: #ffffff; */
+    text-align: left;
+    opacity:1;
+    /* display:inline; */
+    /* float: right; */
+    /* margin-top:auto; */
+    height: 10px;
+    font-size: 12px;
+}
+
+footer {
+  background-color:  white;
+  color: rgb(78, 78, 78);
+  opacity: 1;
+  position:absolute;
+    bottom: 0px;
+    height: 30px;
+    left: 0;  right: 0;
+    /* position: absolute; */
+    width: 100%;
+    /* background-image: url(../Assets/FooterImg.png) */
+}
+
+.citeNote{
+  margin-bottom: 20px;
+  margin-left: 20px;
+   color: black;
+    font-size: 12px;
+    width:350px;
+    /* display: inline-block ; */
+    float:left;
+text-align:left;
+
+
+
+}
+
+a {
+  color: rgb(55, 52, 52);
+   text-decoration: none;
+ }
+ a:hover{
+   color: #CF2D35;
+ text-decoration: none;
+
+ }
+
+ a:link:active, a:visited:active {
+ color: grey;
+}
+
+rect{
+
+}
+
+.item-bg rect{
+  transition:0.5s;
+}
+.item-bg rect:hover{
+  transition: 0.5s;
+  fill:#ffffff !important;
+  
+}
